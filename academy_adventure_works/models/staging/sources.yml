@@ -1,0 +1,26 @@
+version: 2
+
+sources:
+  - name: adventure_works
+    schema: adventure_works
+    description: Fonte de dados criada através do Stitch
+    tables:
+      - name: businessentityaddress
+      - name: countryregion
+      - name: creditcard
+      - name: customer
+      - name: employee
+      - name: personcreditcard
+      - name: product
+      - name: productcategory
+      - name: productdescription
+      - name: productmodel
+      - name: productmodelproductdescriptionculture
+      - name: productsubcategory
+      - name: salesorderdetail
+      - name: salesorderheader
+      - name: salesorderheadersalesreason
+      - name: salesperson
+      - name: salesreason
+      - name: stateprovince
+      - name: store
