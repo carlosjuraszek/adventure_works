@@ -5,6 +5,7 @@ sources:
     schema: adventure_works
     description: Fonte de dados criada através do Stitch
     tables:
+      - name: address
       - name: businessentityaddress
       - name: countryregion
       - name: creditcard
