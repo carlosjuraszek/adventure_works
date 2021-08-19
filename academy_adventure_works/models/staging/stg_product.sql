@@ -1,6 +1,6 @@
 with src_data as (
     select
-        productid as id_produto
+        cast(productid as INT64) as id_produto
         , name as produto
         , productnumber as produto_numero
         , case
