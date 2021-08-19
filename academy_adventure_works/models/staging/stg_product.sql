@@ -11,30 +11,15 @@ with src_data as (
             when finishedgoodsflag is true then 'Sim'
             else 'Nao'
           end as pode_vender
-        , case
-            when color is null then 'Nao Informado'
-            else color
-          end as cor_produto
+        , coalesce(cast(color as string), 'Not Informed') as cor_produto
         , safetystocklevel as estoque_seguranca
         , reorderpoint as ponto_compra
         , standardcost as custo_padrao
         , listprice as preco_venda
-        , case
-            when size is null then 'Nao Informado'
-            else size
-          end as tamanho_produto  
-        , case 
-            when sizeunitmeasurecode is null then 'Nao Informado'
-            else sizeunitmeasurecode
-          end as tamanho_unidade
-        , case
-            when weightunitmeasurecode is null then 'Nao Informado'
-            else weightunitmeasurecode
-          end as peso_unidade
-        , case
-            when weight is null then 'Nao Informado'
-            else weight
-          end as peso_produto
+        , coalesce(cast(size as string), 'Not Informed') as tamanho_produto  
+        , coalesce(cast(sizeunitmeasurecode as string), 'Not Informed') as tamanho_unidade
+        , coalesce(cast(weightunitmeasurecode as string), 'Not Informed') as peso_unidade
+        , coalesce(cast(weight as string), 'Not Informed') as peso_produto
         , daystomanufacture as dias_fabricar
         , case
             when productline = 'R' then 'Road'
