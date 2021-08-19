@@ -11,6 +11,7 @@ sources:
       - name: creditcard
       - name: customer
       - name: employee
+      - name: person
       - name: personcreditcard
       - name: product
       - name: productcategory

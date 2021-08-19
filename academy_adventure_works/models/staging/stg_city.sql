@@ -10,7 +10,7 @@ with src_data as (
     select
         *
         , {{ dbt_utils.surrogate_key(['id_estado']) }} as sk_estado
-        , {{ dbt_utils.surrogate_key(['id_endereco']) }} as sk_cidade
+        , {{ dbt_utils.surrogate_key(['id_endereco']) }} as sk_endereco
     from src_data
 )
 
